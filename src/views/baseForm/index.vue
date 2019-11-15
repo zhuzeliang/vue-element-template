@@ -40,19 +40,24 @@ export default {
   methods: {
     getOptions() {
       setTimeout(() => {
-        this.dicData = [{
-          value: 0,
-          label: '黄金糕'
-        }, {
-          value: 1,
-          label: '蚵仔煎'
-        }, {
-          value: 2,
-          label: '龙须面'
-        }, {
-          value: 3,
-          label: '北京烤鸭'
-        }]
+        this.dicData = [
+          {
+            value: 0,
+            label: '黄金糕'
+          },
+          {
+            value: 1,
+            label: '蚵仔煎'
+          },
+          {
+            value: 2,
+            label: '龙须面'
+          },
+          {
+            value: 3,
+            label: '北京烤鸭'
+          }
+        ]
         this.obj.name = 999
         this.options = formConfig(this)
       }, 5000)
@@ -67,5 +72,4 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
-
 </style>
