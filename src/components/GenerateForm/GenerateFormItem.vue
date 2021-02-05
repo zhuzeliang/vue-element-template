@@ -10,16 +10,16 @@
         v-if="
           widget.dataType == 'number' || widget.dataType == 'integer' || widget.dataType == 'float'
         "
-        :type="widget.dataType"
         v-model.number="dataModel"
+        :type="widget.dataType"
         :placeholder="widget.placeholder"
         :style="{ width: widget.width }"
         :disabled="disabled || widget.disabled"
       />
       <el-input
         v-else
-        :type="widget.dataType"
         v-model="dataModel"
+        :type="widget.dataType"
         :disabled="disabled || widget.disabled"
         :placeholder="widget.placeholder"
         :style="{ width: widget.width }"
@@ -28,8 +28,8 @@
 
     <template v-if="widget.type == 'textarea'">
       <el-input
-        :rows="5"
         v-model="dataModel"
+        :rows="5"
         :disabled="disabled || widget.disabled"
         :placeholder="widget.placeholder"
         :style="{ width: widget.width }"
@@ -55,8 +55,8 @@
       >
         <el-radio
           v-for="(item, index) in widget.options"
-          :label="widget.props ? item[widget.props.value] : item.value"
           :key="index"
+          :label="widget.props ? item[widget.props.value] : item.value"
         >
           <template v-if="widget.remote">{{ item.label }}</template>
           <template v-else>{{ widget.props ? item[widget.props.label] : item.label }}</template>
@@ -70,7 +70,7 @@
         :style="{ width: widget.width }"
         :disabled="disabled || widget.disabled"
       >
-        <el-checkbox v-for="(item, index) in widget.options" :label="item.value" :key="index">
+        <el-checkbox v-for="(item, index) in widget.options" :key="index" :label="item.value">
           <template v-if="widget.remote">{{ item.label }}</template>
           <template v-else>{{ item.value }}</template>
         </el-checkbox>
