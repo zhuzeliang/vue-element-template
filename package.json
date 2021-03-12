@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@antv/g6-editor": "^1.2.0",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "vue-g6-editor": "^0.2.0",
     "@babel/core": "7.0.0",
     "@babel/register": "7.0.0",
